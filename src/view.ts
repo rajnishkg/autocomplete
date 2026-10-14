@@ -232,7 +232,7 @@ export const commitCharacters = Prec.highest(EditorView.domEventHandlers({
   keydown(event, view) {
     let field = view.state.field(completionState, false)
     if (!field || !field.open || field.open.disabled || field.open.selected < 0 ||
-        event.key.length > 1 || event.ctrlKey && !(windows && event.altKey) || event.metaKey)
+        !event.key || event.key.length > 1 || event.ctrlKey && !(windows && event.altKey) || event.metaKey)
       return false
     let option = field.open.options[field.open.selected]
     let result = field.active.find(a => a.source == option.source) as ActiveResult
