@@ -1,3 +1,9 @@
+## 6.20.4 (2026-10-19)
+
+### Bug fixes
+
+Handle `KeyboardEvent`s without `key` property without crashing.
+
 ## 6.20.3 (2026-06-03)
 
 ### Bug fixes
